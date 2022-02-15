@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+    <title>Roleta da Decisão | Gire a Roleta para Decidir Aleatoriamente Entre Algumas Opções</title>
+    
+    <!--================== Meta description and meta title for google search results ==================-->
+    <meta charset="utf-8">
+    
+    <meta name="description" content="Gire a roleta da decisão para decidir aleatoriamente entre algumas opções. Também personalize suas escolhas  
+                                      removendo ou adicionando suas próprias!" />
+    <!-- <meta name="keywords" content="roleta da decisão, roleta da decisao, roleta de decisões, roleta decisao, roleta online, roleta para decidir aleatoriamente, 
+                                   roleta para decidir,lucky roulette"> -->
+    <link rel="canonical" href="https://random-wheel.com/"> 
+
+
+    <!--======================================= Mobile Specifc Metas =======================================-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!--======================================= CSS =======================================-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/style.css"   type="text/css" >
+    <link rel="icon"       href="images/logo.png" type = "image/x-icon"> 
+
+    
+    <!--======================================= JS =======================================-->
+	  
+    
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-171466011-1');
+    </script>
+
+
+
+  </head>   
+
+  <body>
+     <!--========================= Google Tag Manager (noscript) =========================-->
+
+        
+    <div class="container bg-faded">
+      <h1 class="text-center">Roleta da Decisão</h1>
+      
+      <!--==================== ROLETA ==================== -->
+      <div id="chart" align="center"></div>
+
+      <div class="col-sm-12 col-md-12">
+        <div class="col-sm-2"></div>
+        <!--======== INÍCIO FORMULÁRIO & LISTA DE OPÇÕES ========-->
+        <div class="lista-opcoes col-sm-6 col-md-4" id="formulario" align="center">
+          <form action="javascript:void(0);" method="POST" onsubmit="app.Add()"> 
+            <input type="text" id="add-name" placeholder="Nova Opção">
+            <input type="submit" value="Adicionar" class="btn btn-success">
+          </form>
+
+            <div id="spoiler" role="aria-hidden" style="display: none">
+            <form action="javascript:void(0);" method="POST" id="saveEdit">
+              <input type="text" id="edit-name">
+              <input type="submit" value="Edit"/><a onclick="CloseInput()" aria-label="Close" >&#10006;</a>
+            </form>
+          </div>
+          <p></p>
+          <table class="table table-bordered">
+            <tr>
+              <th>Descrição</th>
+              <th></th>
+            </tr>
+              <tbody id="refeicao-list">
+              </tbody>
+          </table>
+          <button class="btn btn-success" onclick="teste()"><b>Aplicar Alterações</b></button>
+        </div>
+        <!--======== FIM FORMULÁRIO & LISTA DE OPÇÕES ========-->
+
+        <!--======== INÍCIO DESCRIÇÃO========-->
+        <div class="col-sm-4 juca">
+          <h3>Oque é a Roleta da Decisão?</h3>
+          <p class="text-justify">
+              A Roleta da Decisão é uma ferramenta giratória on-line gratuita que permite criar sua própria roleta para tomada de decisões, sorteios, jogos e muito mais.
+          </p>
+          <h3>Tomando decisões</h3>
+          <p class="text-justify">
+             Às vezes, oque você precisa é simplesmente uma forma de realizar decisões, como oque jogar, onde almoçar, que filme assistir ou oque fazer.
+          </p>
+          <h3>Como Utilizar?</h3>
+          <p class="text-justify">
+             Adicione ou remova suas opções na lista ao lado e gire para tomar decisões que não têm respostas erradas.
+          </p>
+        </div>
+        <!--======== FIM DESCRIÇÃO========-->
+      </div> 
+      <br/>
+
+     <div class="col-sm-12 banner-rodape" align="center">
+     </div>
+    </div>
+    <footer class="social-footer">
+      <div class="social-footer-left">
+        <p align="center">&copy; Copyright 2020 <a href="www.random-wheel.com/">Roleta da Decisão</a></p>
+        <p align="center"><a href="mailto:roletadadecisao@gmail.com">Contato ou Sugestões</a></p>
+      </div>
+      <div class="social-footer-icons">
+        <ul class="menu simple">
+          <a href="https://www.instagram.com/roletadadecisao/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://br.pinterest.com/roletadadecisao/"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+
+  <script type="text/javascript" src="js/chart.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  
+</html>
