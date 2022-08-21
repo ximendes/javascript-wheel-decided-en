@@ -64,7 +64,7 @@ function createChart(){
             .attr("r", 50)
             .style({"fill":"white","cursor":"pointer"});
         //spin text
-        var texto = "GIRAR";
+        var texto = "SPIN";
         container.append("text")
             .attr("x", 0)
             .attr("y", 15)
