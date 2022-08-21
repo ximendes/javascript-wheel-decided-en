@@ -5,10 +5,10 @@ var app = new function() {
   this.countries = [{"label":'Hambúguer'}, 
                     {"label":'Pizza'}, 
                     {"label":'Hot Dog'}, 
-                    {"label":'Comida Mexicana'}, 
-                    {"label":'Comida Japonesa'}, 
-                    {"label":'Churrasco'}, 
-                    {"label":'Comida Italiana'}, 
+                    {"label":'Mexican Food'}, 
+                    {"label":'Japanese Food'}, 
+                    {"label":'Barbecue'}, 
+                    {"label":'Italian Food'}, 
                     {"label":'Sandwich'}];
   
   this.FetchAll = function() {
@@ -82,7 +82,7 @@ function CloseInput() {
 
 function teste(){
     if(app.countries.length == 0){
-        alert('Adicione ao menos uma opção.');
+        alert('Add at least one option.');
     }else{
         createChart();
       }
