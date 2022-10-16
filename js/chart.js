@@ -79,7 +79,7 @@ function createChart(){
             container.on("click", null);
 
             var ps = 360/data.length;
-            var rng = Math.floor((Math.random() * 1440) + 360);
+            var rng = Math.floor((Math.random() * 3440) + 360);
                 
             rotation = (Math.round(rng / ps) * ps);
             picked = Math.round(data.length - (rotation % 360)/ps);
@@ -92,8 +92,8 @@ function createChart(){
                 .attrTween("transform", rotTween)
                 .each("end", function(){
                     //populate question
-                    //d3.select("#question h1").text(data[picked].question);
-                    //document.getElementById('escolha').innerHTML = data[picked].label;
+                    // d3.select("#question h1").text(data[picked].question);
+                    messagePopup(picked);
                     /* Comment the below line for restrict spin to sngle time */
                     container.on("click", spin);
                 });
@@ -105,4 +105,34 @@ function createChart(){
             return "rotate(" + i(t) + ")";
         };    
     } 
+}
+
+function messagePopup(picked){
+    picked = app.countries.length === picked ? 0 : picked;
+    document.getElementById('conteudo-modal').innerHTML= "<h2>" + app.countries[picked].label; + "</h2>"
+    $('#exampleModalCenter').modal('show'); 
+    var duration = 900;
+    var end = Date.now() + duration;
+    
+    (function frame() {
+      // launch a few confetti from the left edge
+      confetti({
+        particleCount: 7,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 }
+      });
+      // and launch a few from the right edge
+      confetti({
+        particleCount: 7,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 }
+      });
+    
+      // keep going until we are out of time
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    }());
 }

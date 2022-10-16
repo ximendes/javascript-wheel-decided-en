@@ -18,8 +18,8 @@ var app = new function() {
     if (this.countries.length > 0) {
       for (i = 0; i < this.countries.length; i++) {
         data += '<tr>';
-        data += '<td><b>' + this.countries[i].label + '</b></td>';
-        data += '<td><button onclick="app.Edit(' + i + ')" class="btn btn-labeled btn-primary"><span class="btn-label"><i class="glyphicon glyphicon-pencil"></i></span></button>  ';
+        data += '<td align="center"><b>' + this.countries[i].label + '</b></td>';
+        data += '<td align="center"><button onclick="app.Edit(' + i + ')" class="btn btn-labeled btn-primary"><span class="btn-label"><i class="glyphicon glyphicon-pencil"></i></span></button>  ';
         data += '<button onclick="app.Delete(' + i + ')" class="btn btn-labeled btn-danger"><span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span></button> </td>';
         data += '</tr>';
       }
